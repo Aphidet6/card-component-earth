@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: hsl(217, 54%, 11%);
+      font-size: 18px;
+    }
+    .container {
+      max-width: 300px;
+      height: auto;
+      background-color: hsl(216, 50%, 16%);
+      margin:150px auto;
+      border-radius: 15px;
+      padding: 25px;
+      
+    }.img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+    }
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .3s ease;
+      background-color:hsl(178, 100%, 50%);
+      border-radius: 10px;
+    }
+    .img:hover .overlay {
+      opacity: 0.7;
+    }
+    svg {
+      color: white;
+      font-size: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .detail1 {
+      margin-top: 15px;
+    }
+    .detail1 h4 {
+      color: hsl(0, 0%, 100%);
+      font-size: 18px;
+    }
+    .detail1 h4:hover {
+      color:hsl(178, 100%, 50%);
+    }
+    .detail1 p {
+      color: hsl(215, 51%, 70%);
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .detail2 {
+      display: flex;
+      margin-bottom: 15px;
+      justify-content: space-between;
+    }
+    .left {
+      display: flex;
+      color: hsl(178, 100%, 50%);
+    }
+    .left img{
+      margin-right: 10px;
+    }
+    .right {
+      display: flex;
+      color: hsl(215, 51%, 70%);
+    }
+    .right img{
+      margin-right: 10px;
+    }
+    hr {
+      height: 1px;
+      background-color:hsl(215, 32%, 27%);
+      border: none;
+      margin-bottom: 15px;
+    }
+    footer {
+      display: flex;
+    }
+    footer img {
+      width: 30px;
+      height: 30px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    footer p {
+      color: hsl(215, 51%, 70%);
+    }span {
+      color:white;
+    }
+    span:hover {
+      color:hsl(178, 100%, 50%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="img">
+        <img src="images/image-equilibrium.jpg" alt="equilibrium" class="image">
+        <div class="overlay">
+          <a href="#" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+            </svg>
+          </a>
+        </div>
+    </div>
+    <div class="detail1">
+      <h4>Equilibrium #3429</h4>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+    <div class="detail2">
+      <div class="left">
+        <img src="images/icon-ethereum.svg"><p>0.041 ETH</p>
+      </div>
+      <div class="right">
+        <img src="images/icon-clock.svg"><p class="right">3 days left</p>
+      </div>   
+    </div>
+    <hr>
+    <footer>
+      <img src="images/image-avatar.png" alt="avatar">
+      <p>Creation of <span>Jules Wyvern</span></p>
+    </footer>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
